@@ -39,3 +39,5 @@ Mis contribuciones técnicas específicas incluyen:
 *   Jorge Ochoa Gutiérrez
 *   Aimar Olaverri Ojer
 *   Guillermo Fernández Roncal
+
+Nota: 8,5/10 UPNA
