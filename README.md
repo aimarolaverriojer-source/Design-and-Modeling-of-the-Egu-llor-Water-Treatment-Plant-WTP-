@@ -1,7 +1,7 @@
 # Design and Modeling of the Eguillor Water Treatment Plant (WTP)
 Feasibility analysis and design of a hydraulic turbine system for energy recovery at the Eguillor water treatment plant.
 
-# Turbine Design and Modeling for the Eguillor Water Treatment Plant[cite: 1]
+# Turbine Design and Modeling for the Eguillor Water Treatment Plant
 
 ## Project Description
 This repository contains the technical and energetic feasibility analysis for installing a hydraulic turbine in the pipeline feeding the Eguillor Water Treatment Plant (ETAP). The main objective is to harness the existing ~7-meter head from the Arteta spring to generate electrical energy from head losses, without compromising the water supply.
