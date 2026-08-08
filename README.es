@@ -1,39 +1,39 @@
 *Leer en [Español](README_es.md)*
 
-# Turbine Design and Modeling for the Eguillor Water Treatment Plant[cite: 1]
+# Diseño y Modelizado de Turbina para la ETAP de Eguillor[cite: 1]
 
-## Project Description
-This repository contains the technical and energetic feasibility analysis for installing a hydraulic turbine in the pipeline feeding the Eguillor Water Treatment Plant (ETAP)[cite: 1]. The main objective is to harness the existing ~7-meter head from the Arteta spring to generate electrical energy from head losses, without compromising the water supply[cite: 1].
+## Descripción del Proyecto
+Este repositorio contiene el análisis de viabilidad técnica y energética para la instalación de una turbina hidráulica en la conducción que alimenta la Estación de Tratamiento de Agua Potable (ETAP) de Eguillor[cite: 1]. El objetivo principal es aprovechar el desnivel existente (aproximadamente 7 metros) desde el manantial de Arteta para generar energía eléctrica a partir de las pérdidas de carga, sin comprometer el suministro de agua[cite: 1].
 
-## Objectives
-*   **Energy Recovery:** Convert dissipated energy into usable electricity to reduce the plant's consumption[cite: 1].
-*   **Service Continuity:** Integrate a by-pass system to ensure the plant's normal operation and water quality are unaffected[cite: 1].
-*   **Sustainability:** Demonstrate that energy recovery in water pipelines is an efficient and sustainable measure for water management[cite: 1].
+## Objetivos
+*   **Recuperación energética:** Convertir la energía disipada en electricidad utilizable para reducir el consumo de la planta[cite: 1].
+*   **Continuidad del servicio:** Integrar un sistema *by-pass* para no afectar la operación ordinaria de la ETAP ni la calidad del agua suministrada[cite: 1].
+*   **Sostenibilidad:** Demostrar que la recuperación en conducciones es una medida eficiente y sostenible para la gestión hídrica[cite: 1].
 
-## Technical Parameters & Proposed Solution
-After analyzing the high variability of the available flow, an **Asymmetric Tandem** configuration is proposed to maximize efficiency[cite: 1]:
-*   **Group A (Main Turbine):** Kaplan-type axial turbine (Global Hydro reference or similar), designed for a base load of 0.45 m³/s and an estimated power of ~25.51 kW[cite: 1].
-*   **Group B (Secondary Turbine):** Compact axial turbine, Propeller or Semi-Kaplan type (Andritz Hydro reference), designed for minimum flows (0.25 m³/s) with a power of ~12.69 kW[cite: 1].
-*   **Total Installed Power:** 38.2 kW[cite: 1].
+## Parámetros Técnicos y Solución Propuesta
+Tras analizar la gran variabilidad del caudal disponible, se propone una configuración en **Tándem Asimétrico** para maximizar la eficiencia[cite: 1]:
+*   **Grupo A (Turbina Principal):** Turbina axial tipo Kaplan (referencia Global Hydro o similar), diseñada para una carga base de 0,45 m³/s y una potencia estimada de ~25,51 kW[cite: 1].
+*   **Grupo B (Turbina Secundaria):** Turbina axial compacta tipo Hélice o Semi-Kaplan (referencia Andritz Hydro), ideada para caudales mínimos (0,25 m³/s) con una potencia de ~12,69 kW[cite: 1].
+*   **Potencia Total Instalada:** 38,2 kW[cite: 1].
 
-## My Contribution: Control, Electrical System, and Project Management
-As a member of Group 8, I was responsible for the **Project Management** (coordinating the team's workflow and organizing the final documentation) and I fully developed **Section 7: Electrical System and Control**[cite: 1].
+## Mi Contribución: Sistema de Control, Eléctrico y Gestión del Proyecto
+Como miembro del Grupo 8, fui responsable de la **Gestión del Proyecto** (organizando el trabajo del equipo y la documentación final) y desarrollé íntegramente el **Apartado 7: Sistema eléctrico y control**[cite: 1].
 
-My specific technical contributions include:
-*   **Electrical Circuit Design:** Developed a complete control circuit (designed with CADE_SIMU) that automatically manages the water flow through motorized valves[cite: 1]. The system uses limit switches to distribute flow between the main Kaplan turbine and the "satellite" turbine based on real-time flow thresholds (< 300 L/s, 300-550 L/s, and > 550 L/s)[cite: 1].
-*   **Kaplan Turbine Dynamic Modeling (MATLAB):** Created a MATLAB script to model the dynamic response of the Kaplan turbine's pitch control[cite: 1]. I designed a first-order transfer function relating generated power to pitch angle based on flow rate, maximizing efficiency[cite: 1].
-    *   *System Analysis:* Used Bode diagrams and step response plots to demonstrate that the turbine responds well to low frequencies but acts as a slow system[cite: 1]. This proves that the pitch control must act progressively to avoid instability and energy loss from water impact[cite: 1].
-*   **Electrical Protections:** Defined the required protection schemes (overcurrent, differential, over/under frequency) and hydraulic safety protocols to prevent cavitation and overpressure[cite: 1].
-*   **Mechanical Stress Analysis (SolidWorks):** Conducted a Finite Element Analysis (FEA) on the Kaplan runner blades to verify structural integrity under hydraulic loads[cite: 1]. 
-    *   *Results:* Under a pressure of 150,000 Pa, the maximum von Mises stress was ~35 MPa, yielding a Factor of Safety (FOS) of ~4, confirming the design remains well within the elastic limit (yield strength: 137.9 MPa)[cite: 1].
+Mis contribuciones técnicas específicas incluyen:
+*   **Diseño del Circuito Eléctrico:** Desarrollé un esquema de mando (diseñado con CADE_SIMU) que modula automáticamente el caudal mediante válvulas actuadoras[cite: 1]. El sistema utiliza finales de carrera para distribuir el agua entre la turbina Kaplan principal y la turbina "satélite" basándose en los umbrales de caudal (< 300 L/s, 300-550 L/s y > 550 L/s)[cite: 1].
+*   **Modelado Dinámico de la Turbina Kaplan (MATLAB):** Creé un script en MATLAB para modelar la respuesta dinámica del control de paso de palas (pitch)[cite: 1]. Diseñé una función de transferencia de primer orden que relaciona la potencia generada con el ángulo de las palas en función del caudal[cite: 1].
+    *   *Análisis del Sistema:* Mediante diagramas de Bode y la respuesta al escalón, demostré que la turbina responde bien a frecuencias bajas pero es un sistema lento[cite: 1]. Esto justifica que el control de palas debe ser progresivo para evitar inestabilidad y pérdida de energía cinética[cite: 1].
+*   **Protecciones Eléctricas:** Definí los esquemas de protección necesarios (sobreintensidad, diferencial, sub/sobrefrecuencia) y protocolos de seguridad hidráulica para evitar cavitación y sobrepresiones[cite: 1].
+*   **Análisis de Tensiones Mecánicas (SolidWorks):** Realicé un análisis de elementos finitos (FEA) sobre las palas del rodete Kaplan para verificar su integridad bajo cargas hidráulicas[cite: 1].
+    *   *Resultados:* Sometidas a 150.000 Pa, la tensión máxima de von Mises fue de ~35 MPa, obteniendo un Factor de Seguridad (FOS) de ~4, lo que confirma que el diseño soporta holgadamente los requerimientos (límite elástico: 137,9 MPa)[cite: 1].
 
-## Economic Viability
-*   **Estimated Total Investment:** €108,000[cite: 1].
-*   **Annual Generation:** 240,000 kWh/year[cite: 1].
-*   **Estimated Economic Savings:** €24,000/year (assuming €0.10/kWh)[cite: 1].
-*   **Return on Investment (ROI):** 4.5 years[cite: 1].
+## Viabilidad Económica
+*   **Inversión Total Estimada:** 108.000 €[cite: 1].
+*   **Generación Anual:** 240.000 kWh/year[cite: 1].
+*   **Ahorro Económico Estimado:** 24.000 €/año (asumiendo 0,10 €/kWh)[cite: 1].
+*   **Retorno de Inversión (ROI):** 4,5 años[cite: 1].
 
-## Authors (Group 8 - Universidad Pública de Navarra)
+## Autores del Proyecto (Grupo 8 - Universidad Pública de Navarra)
 *   Daniel Lauroba Ruiz[cite: 1]
 *   Héctor Bazo Ochoa[cite: 1]
 *   Jorge Ochoa Gutiérrez[cite: 1]
